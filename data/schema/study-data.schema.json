@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Amharic Study Bible Unified Study Record",
+  "type": "object",
+  "required": ["id", "type", "sourceId", "license", "attribution"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "type": {"enum": ["lexical", "morphology", "cross_reference", "patristic", "historical", "place"]},
+    "sourceId": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "attribution": {"type": "string", "minLength": 1},
+    "reference": {"type": "string"},
+    "language": {"type": "string"},
+    "lemma": {"type": "string"},
+    "strongs": {"type": "string"},
+    "morphology": {"type": "string"},
+    "text": {"type": "string"},
+    "sourceUrl": {"type": "string"},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}
