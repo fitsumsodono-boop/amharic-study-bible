@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "versions": [
+    {
+      "id": "am-1954",
+      "name": "1954 የአማርኛ መጽሐፍ ቅዱስ",
+      "shortName": "1954",
+      "language": "am",
+      "testamentCoverage": "OT+NT",
+      "status": "pending-verification",
+      "sourceId": "amharic-bible-api",
+      "notes": "Translation provenance and redistribution rights must be verified before bundling full text."
+    },
+    {
+      "id": "am-amed",
+      "name": "አዲሱ መደበኛ ትርጉም",
+      "shortName": "አማ05",
+      "language": "am",
+      "publisher": "Bible Society of Ethiopia",
+      "testamentCoverage": "OT+NT",
+      "status": "pending-verification",
+      "sourceId": "bible-society-of-ethiopia",
+      "notes": "Copyright/licensing and redistribution permissions must be verified before bundling full text."
+    }
+  ]
+}
