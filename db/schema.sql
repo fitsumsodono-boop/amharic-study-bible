@@ -1,0 +1,26 @@
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE bible_versions (id TEXT PRIMARY KEY, name TEXT NOT NULL, short_name TEXT, language TEXT NOT NULL, publisher TEXT, copyright TEXT, license TEXT, testament_coverage TEXT NOT NULL, status TEXT NOT NULL, source_id TEXT, notes TEXT);
+CREATE TABLE verses (id TEXT PRIMARY KEY, version_id TEXT NOT NULL REFERENCES bible_versions(id), book TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, text TEXT NOT NULL, normalized_text TEXT);
+CREATE UNIQUE INDEX idx_verses_ref ON verses(version_id, book, chapter, verse);
+CREATE INDEX idx_verses_text ON verses(normalized_text);
+CREATE TABLE lexical_entries (id TEXT PRIMARY KEY, language TEXT NOT NULL, lemma TEXT NOT NULL, transliteration TEXT, pronunciation TEXT, strongs TEXT, english_meaning TEXT, amharic_meaning TEXT, semantic_range TEXT, morphology TEXT, syntax TEXT, sources TEXT);
+CREATE INDEX idx_lex_lemma ON lexical_entries(language, lemma);
+CREATE INDEX idx_lex_strongs ON lexical_entries(strongs);
+CREATE TABLE verse_word_links (id TEXT PRIMARY KEY, verse_id TEXT NOT NULL, token TEXT NOT NULL, language TEXT NOT NULL, lemma TEXT, strongs TEXT, lexical_entry_id TEXT, morphology TEXT, syntax TEXT, position INTEGER, source_id TEXT, FOREIGN KEY(verse_id) REFERENCES verses(id), FOREIGN KEY(lexical_entry_id) REFERENCES lexical_entries(id));
+CREATE INDEX idx_vwl_verse ON verse_word_links(verse_id, position);
+CREATE INDEX idx_vwl_lemma ON verse_word_links(lemma);
+CREATE TABLE people_events (id TEXT PRIMARY KEY, type TEXT NOT NULL, name TEXT NOT NULL, amharic_name TEXT, description_amharic TEXT, description_english TEXT, verse_ids TEXT, parents TEXT, children TEXT, spouse_ids TEXT, related_place_ids TEXT, related_person_ids TEXT, date_start TEXT, date_end TEXT, date_certainty TEXT, event_type TEXT, themes_amharic TEXT, sources TEXT, license TEXT);
+CREATE INDEX idx_people_name ON people_events(name);
+CREATE INDEX idx_people_amharic ON people_events(amharic_name);
+CREATE TABLE places (id TEXT PRIMARY KEY, name TEXT NOT NULL, amharic_name TEXT, description_amharic TEXT, latitude REAL, longitude REAL, confidence TEXT, verse_ids TEXT, sources TEXT, license TEXT);
+CREATE INDEX idx_places_name ON places(name);
+CREATE INDEX idx_places_amharic ON places(amharic_name);
+CREATE TABLE study_context (id TEXT PRIMARY KEY, type TEXT NOT NULL, title TEXT, english TEXT, amharic TEXT NOT NULL, verse_ids TEXT, period TEXT, themes TEXT, sources TEXT, license TEXT, confidence TEXT);
+CREATE TABLE patristic_records (id TEXT PRIMARY KEY, father TEXT NOT NULL, work TEXT, reference TEXT, source_language TEXT, english TEXT, amharic TEXT NOT NULL, interpretation TEXT, historical_context_amharic TEXT, theological_themes_amharic TEXT, verse_ids TEXT, sources TEXT, license TEXT);
+CREATE INDEX idx_patristic_father ON patristic_records(father);
+CREATE TABLE cross_references (id TEXT PRIMARY KEY, from_verse_id TEXT NOT NULL, to_verse_id TEXT NOT NULL, relation TEXT NOT NULL, strength TEXT, reason_english TEXT, reason_amharic TEXT, source TEXT, license TEXT);
+CREATE INDEX idx_cross_from ON cross_references(from_verse_id);
+CREATE INDEX idx_cross_to ON cross_references(to_verse_id);
+CREATE TABLE sources (id TEXT PRIMARY KEY, name TEXT NOT NULL, repository TEXT, license TEXT, status TEXT NOT NULL, attribution TEXT);
+CREATE VIRTUAL TABLE search_fts USING fts5(record_id UNINDEXED, kind UNINDEXED, search_text, normalized_text, amharic_text, references);
