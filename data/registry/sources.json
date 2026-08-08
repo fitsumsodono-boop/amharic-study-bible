@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "description": "Registry of external offline datasets. No dataset should be imported until its license and attribution are verified.",
+  "sources": []
+}
