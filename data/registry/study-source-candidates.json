@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "historicalchristianfaith-commentaries",
+      "name": "Historical Christian Faith Commentaries Database",
+      "repository": "HistoricalChristianFaith/Commentaries-Database",
+      "role": "Church Father and historical commentary discovery/import candidate",
+      "status": "candidate",
+      "license": "must verify repository and individual source-file licensing before redistribution",
+      "notes": "Repository provides TOML commentary records, author metadata, source URLs, dates, and compiled SQLite/JSON/CSV options. Do not assume the repository license covers every underlying quotation."
+    },
+    {
+      "id": "ogl-patrologia-graeca",
+      "name": "Open Greek and Latin Patrologia Graeca OCR",
+      "repository": "OGL-PatrologiaGraecaDev",
+      "role": "Greek patristic text discovery candidate",
+      "status": "candidate",
+      "license": "verify repository and source-volume rights",
+      "notes": "OCR/text source; preserve provenance and distinguish OCR from critical editions."
+    },
+    {
+      "id": "csel-dev",
+      "name": "Corpus Scriptorum Ecclesiasticorum Latinorum development data",
+      "repository": "OpenGreekAndLatin/csel-dev",
+      "role": "Latin Church Fathers public-domain volume data candidate",
+      "status": "candidate",
+      "license": "verify exact file and edition rights",
+      "notes": "Useful for Latin patristic texts; keep edition metadata."
+    }
+  ]
+}
