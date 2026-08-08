@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "versions": [
+    {
+      "id": "am-1954",
+      "name": "አማርኛ 1954 ትርጉም",
+      "shortName": "1954",
+      "language": "am",
+      "status": "required-source",
+      "notes": "Import only from a source that grants redistribution rights or from user-supplied/licensed files."
+    },
+    {
+      "id": "am-modern-standard",
+      "name": "አዲሱ መደበኛ ትርጉም",
+      "shortName": "አዲሱ መደበኛ",
+      "language": "am",
+      "status": "required-source",
+      "notes": "Import only from a source that grants redistribution rights or from user-supplied/licensed files."
+    }
+  ]
+}
