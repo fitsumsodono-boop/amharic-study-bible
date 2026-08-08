@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/amharic-study-bible/bible.schema.json",
+  "title": "Normalized Bible Dataset",
+  "type": "object",
+  "required": ["books"],
+  "properties": {
+    "books": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "testament", "chapters"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9_-]+$"},
+          "name": {"type": "string", "minLength": 1},
+          "nameAm": {"type": "string"},
+          "abbreviation": {"type": "string"},
+          "testament": {"enum": ["OT", "NT"]},
+          "chapters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["number", "verses"],
+              "properties": {
+                "number": {"type": "integer", "minimum": 1},
+                "verses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["number", "text"],
+                    "properties": {
+                      "number": {"type": "integer", "minimum": 1},
+                      "text": {"type": "string", "minLength": 1}
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
