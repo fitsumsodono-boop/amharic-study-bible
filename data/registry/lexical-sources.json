@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "macula-greek",
+      "repository": "Clear-Bible/macula-greek",
+      "role": ["greek-text", "morphology", "syntax", "word-sense", "semantic-data"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "primary Greek annotation candidate"
+    },
+    {
+      "id": "morphgnt-sblgnt",
+      "repository": "morphgnt/sblgnt",
+      "role": ["greek-text", "morphology"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "Greek morphology candidate"
+    },
+    {
+      "id": "sblgnt-addons",
+      "repository": "eliranwong/SBLGNT-add-ons",
+      "role": ["strongs-mapping", "gloss"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "Strong's/gloss mapping candidate"
+    },
+    {
+      "id": "greek-lemma-mappings",
+      "repository": "jtauber/greek-lemma-mappings",
+      "role": ["lemma-mapping"],
+      "licenseStatus": "verify",
+      "use": "supplementary Greek lemma mapping"
+    },
+    {
+      "id": "macula-hebrew",
+      "repository": "Clear-Bible/macula-hebrew",
+      "role": ["hebrew-text", "morphology", "syntax", "semantic-data"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "primary Hebrew annotation candidate"
+    },
+    {
+      "id": "openscriptures-morphhb",
+      "repository": "0xvtl/openscriptures-morphhb",
+      "role": ["hebrew-text", "morphology"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "Hebrew morphology candidate"
+    },
+    {
+      "id": "openscriptures-hebrewlexicon",
+      "repository": "0xvtl/openscriptures-HebrewLexicon",
+      "role": ["hebrew-lexicon", "bdb", "strongs-index"],
+      "licenseStatus": "verify-exact-files-before-bundling",
+      "use": "Hebrew lexical candidate"
+    },
+    {
+      "id": "stepbible-data",
+      "repository": "STEPBible/STEPBible-Data",
+      "role": ["lexical-research", "tagged-bible", "supporting-language-data"],
+      "licenseStatus": "verify-per-file-and-underlying-source",
+      "use": "supplementary research source"
+    }
+  ]
+}
