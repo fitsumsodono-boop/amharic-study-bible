@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "daniel-hug-bible-people",
+      "name": "bible-people",
+      "repository": "Daniel-Hug/bible-people",
+      "role": "Biblical people metadata candidate",
+      "status": "candidate",
+      "license": "verify before redistribution",
+      "notes": "Search result identifies a dedicated biblical-people repository; inspect its files and license before import."
+    },
+    {
+      "id": "amalon-chron-bible",
+      "name": "chron-bible",
+      "repository": "amalon/chron-bible",
+      "role": "Biblical chronology candidate",
+      "status": "candidate",
+      "license": "verify before redistribution",
+      "notes": "Dedicated chronology project found in GitHub search. Dates must preserve uncertainty and competing scholarly chronologies."
+    },
+    {
+      "id": "robertrouse-theographic-metadata",
+      "name": "Theographic Bible Metadata",
+      "repository": "robertrouse/theographic-bible-metadata",
+      "role": "People, places, themes, relationships and Bible metadata candidate",
+      "status": "candidate",
+      "license": "verify exact repository/file licensing before redistribution",
+      "notes": "Large Bible metadata repository discovered in GitHub search. Do not assume metadata licensing without inspection."
+    },
+    {
+      "id": "braided-bible-ontology",
+      "name": "Braided Bible Ontology",
+      "repository": "braidedbible/Braided-Bible-Ontology",
+      "role": "Entity/relationship ontology candidate",
+      "status": "candidate",
+      "license": "verify before redistribution",
+      "notes": "Useful as a structural model for people, places, relationships and events."
+    }
+  ]
+}
