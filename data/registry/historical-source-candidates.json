@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "openbibleinfo-geocoding",
+      "name": "OpenBible.info Bible Geocoding Data",
+      "repository": "openbibleinfo/Bible-Geocoding-Data",
+      "role": "Biblical places, ancient-to-modern identifications, coordinates, geometry and source/confidence metadata",
+      "status": "license-verified-candidate",
+      "license": "CC BY 4.0 for the data; OpenStreetMap and images have separate licenses",
+      "notes": "Excellent offline geography foundation. Image files and OSM-derived material require separate license handling. Keep the dataset's confidence and source metadata."
+    },
+    {
+      "id": "historicalchristianfaith-commentaries",
+      "name": "Historical Christian Faith Commentaries Database",
+      "repository": "HistoricalChristianFaith/Commentaries-Database",
+      "role": "Historical and theological commentary candidate",
+      "status": "candidate",
+      "license": "verify repository and underlying quotation/edition rights",
+      "notes": "Useful for verse-linked historical/theological material, but do not assume every underlying quotation is redistributable."
+    }
+  ]
+}
