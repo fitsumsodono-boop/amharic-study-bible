@@ -6,16 +6,26 @@
       "name": "አማርኛ 1954 ትርጉም",
       "shortName": "1954",
       "language": "am",
-      "status": "required-source",
-      "notes": "Import only from a source that grants redistribution rights or from user-supplied/licensed files."
+      "status": "source-not-yet-verified",
+      "notes": "GitHub searches did not identify a repository that clearly labels its text as the 1954 edition and grants redistribution rights. Do not import unlabeled Amharic text as 1954."
     },
     {
       "id": "am-modern-standard",
       "name": "አዲሱ መደበኛ ትርጉም",
       "shortName": "አዲሱ መደበኛ",
       "language": "am",
-      "status": "required-source",
-      "notes": "Import only from a source that grants redistribution rights or from user-supplied/licensed files."
+      "status": "source-not-yet-verified",
+      "notes": "GitHub searches did not identify a repository that clearly labels its text as አዲሱ መደበኛ and grants redistribution rights. Do not import unlabeled Amharic text as this edition."
+    },
+    {
+      "id": "am-generic-github-candidate",
+      "name": "Amharic Bible JSON (edition unspecified)",
+      "shortName": "Amharic JSON candidate",
+      "language": "am",
+      "repository": "magna25/amharic-bible-json",
+      "status": "provenance-review-required",
+      "repositoryLicense": "MIT",
+      "notes": "Repository contains a complete Amharic Bible JSON and an MIT LICENSE, but its README says the text was downloaded from WordProject and partly filled from GeezExperience. The repository license alone does not establish rights to redistribute the underlying Bible translation. It is not labeled as 1954 or አዲሱ መደበኛ, so it must not be used for either edition until provenance and edition are verified."
     }
   ]
 }
