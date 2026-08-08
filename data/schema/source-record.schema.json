@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Offline Source Record",
+  "type": "object",
+  "required": ["id", "sourceId", "kind", "reference", "text"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "sourceId": {"type": "string", "minLength": 1},
+    "kind": {"type": "string", "minLength": 1},
+    "reference": {"type": "string", "minLength": 1},
+    "text": {"type": "string"},
+    "language": {"type": "string"},
+    "license": {"type": "string"},
+    "attribution": {"type": "string"},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}
