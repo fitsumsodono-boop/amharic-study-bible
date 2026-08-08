@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Historical and Theological Study Context",
+  "type": "object",
+  "required": ["id", "reference", "contentType", "source"],
+  "properties": {
+    "id": {"type": "string"},
+    "reference": {"type": "string"},
+    "contentType": {"enum": ["historical", "cultural", "archaeological", "theological", "geographical"]},
+    "titleAm": {"type": "string"},
+    "summaryAm": {"type": "string"},
+    "detailsAm": {"type": "string"},
+    "englishSummary": {"type": "string"},
+    "dateRange": {"type": "string"},
+    "people": {"type": "array", "items": {"type": "string"}},
+    "places": {"type": "array", "items": {"type": "string"}},
+    "events": {"type": "array", "items": {"type": "string"}},
+    "biblicalReferences": {"type": "array", "items": {"type": "string"}},
+    "source": {"type": "string"},
+    "license": {"type": "string"},
+    "attribution": {"type": "string"}
+  },
+  "additionalProperties": true
+}
