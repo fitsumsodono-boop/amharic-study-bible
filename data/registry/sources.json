@@ -1,5 +1,106 @@
 {
   "schemaVersion": 1,
   "description": "Registry of external offline datasets. No dataset should be imported until its license and attribution are verified.",
-  "sources": []
+  "sources": [
+    {
+      "id": "amharic-bible-api",
+      "name": "Amharic Bible API",
+      "repository": "Misikirayu/amharic-bible-api",
+      "role": "Amharic Scripture candidate",
+      "status": "pending-verification",
+      "license": "pending-verification",
+      "provenance": "GitHub repository; underlying Bible text source must be verified",
+      "redistribution": "pending-verification"
+    },
+    {
+      "id": "sblgnt",
+      "name": "SBL Greek New Testament",
+      "repository": "LogosBible/SBLGNT",
+      "role": "Greek New Testament",
+      "status": "candidate",
+      "license": "CC BY 4.0",
+      "provenance": "SBLGNT project",
+      "redistribution": "verify attribution requirements before bundling"
+    },
+    {
+      "id": "openscriptures-strongs",
+      "name": "Open Scriptures Strong's",
+      "repository": "openscriptures/strongs",
+      "role": "Greek and Hebrew Strong's dictionaries",
+      "status": "candidate",
+      "license": "pending-file-level-verification",
+      "provenance": "Open Scriptures",
+      "redistribution": "verify exact file licensing"
+    },
+    {
+      "id": "openscriptures-morphhb",
+      "name": "Open Scriptures Morphological Hebrew Bible",
+      "repository": "openscriptures/morphhb",
+      "role": "Hebrew Old Testament morphology",
+      "status": "candidate",
+      "license": "CC BY 4.0 for relevant morphology/lemma data; verify exact files",
+      "provenance": "Open Scriptures / OSHB ecosystem",
+      "redistribution": "verify attribution requirements"
+    },
+    {
+      "id": "macula-greek",
+      "name": "MACULA Greek",
+      "repository": "Clear-Bible/macula-greek",
+      "role": "Greek morphology, syntax and semantic annotation",
+      "status": "candidate",
+      "license": "CC BY 4.0",
+      "provenance": "Clear Bible / MACULA",
+      "redistribution": "verify attribution requirements"
+    },
+    {
+      "id": "macula-hebrew",
+      "name": "MACULA Hebrew",
+      "repository": "Clear-Bible/macula-hebrew",
+      "role": "Hebrew morphology, syntax and semantic annotation",
+      "status": "candidate",
+      "license": "CC BY 4.0",
+      "provenance": "Clear Bible / MACULA",
+      "redistribution": "verify attribution requirements"
+    },
+    {
+      "id": "hebrewlexicon",
+      "name": "Open Scriptures HebrewLexicon",
+      "repository": "openscriptures/HebrewLexicon",
+      "role": "Hebrew lexicon and BDB/Strong's index",
+      "status": "candidate",
+      "license": "pending-file-level-verification",
+      "provenance": "Open Scriptures",
+      "redistribution": "verify exact source and attribution terms"
+    },
+    {
+      "id": "morphgnt-sblgnt",
+      "name": "MorphGNT SBLGNT",
+      "repository": "morphgnt/sblgnt",
+      "role": "Greek New Testament morphology",
+      "status": "candidate",
+      "license": "pending-file-level-verification",
+      "provenance": "MorphGNT",
+      "redistribution": "verify exact repository license"
+    },
+    {
+      "id": "openbible-geocoding",
+      "name": "Bible Geocoding Data",
+      "repository": "openbibleinfo/Bible-Geocoding-Data",
+      "role": "Biblical place and map data",
+      "status": "candidate",
+      "license": "CC BY 4.0",
+      "provenance": "OpenBible.info",
+      "redistribution": "verify attribution requirements"
+    },
+    {
+      "id": "studybible-mcp",
+      "name": "StudyBible MCP resource map",
+      "repository": "djayatillake/studybible-mcp",
+      "role": "Discovery/index of study notes and reference resources; not automatically bundled",
+      "status": "discovery-only",
+      "license": "repository and underlying dataset licenses must be checked separately",
+      "provenance": "GitHub repository",
+      "redistribution": "do not bundle underlying resources until individually verified"
+    }
+  ]
 }
