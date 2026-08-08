@@ -1,0 +1,16 @@
+{
+  "id": "ethiopic-bible-api",
+  "name": "EthiopicBibleAPI",
+  "upstreamRepository": "beldados/EthiopicBibleAPI",
+  "upstreamUrl": "https://github.com/beldados/EthiopicBibleAPI",
+  "license": "MIT for the repository project; underlying Bible text provenance/redistribution rights must be verified separately",
+  "snapshot": {
+    "books": 66,
+    "format": "JSON",
+    "layout": "Books/<Amharic book name>.json",
+    "recordShape": "title, abbv, chapters[], chapters[].chapter, chapters[].verses[]"
+  },
+  "use": "Amharic Bible import source and development API reference",
+  "versionStatus": "edition-not-yet-verified",
+  "important": "Do not label this dataset as 1954 or አዲሱ መደበኛ until the underlying text edition is independently verified."
+}
