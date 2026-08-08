@@ -1,25 +1,46 @@
 # Unified offline study data
 
-The Android app uses a normalized data model so Bible text and study resources can come from different providers without coupling the UI to any one source.
+This directory defines the release data pipeline for the Amharic Study Bible.
 
-## Import policy
+## Release rule
 
-1. Keep the provider/source ID on every imported record.
-2. Keep exact license and attribution metadata.
-3. Verify the exact file being bundled; repository-level licensing is not automatically sufficient for every file.
-4. Do not bundle a Church Father translation merely because the ancient work itself is public domain; verify the edition/translation.
-5. Do not present AI-generated historical or theological claims as primary sources. AI responses should link back to the underlying local records.
+Only datasets with verified redistribution rights may be shipped in `android/app/src/main/assets/study/`. Runtime API data may be cached locally according to its provider's terms, but must not be silently republished as bundled data.
 
-## Planned dataset layers
+## Current source plan
 
-- `abidu-amharic`: Amharic Bible API/runtime source.
-- `sblgnt`: Greek New Testament.
-- `wlc`: Hebrew Old Testament.
-- `stepbible`: lexical/Strong's/morphology support where the exact data file permits redistribution.
-- `macula-greek`: Greek morphology/syntax/semantic annotation.
-- `macula-hebrew`: Hebrew morphology/syntax/semantic annotation.
-- `openbible-geocoding`: biblical places and coordinates.
-- `patristics`: source-by-source public-domain or appropriately licensed editions.
-- `historical`: source-by-source open and attributed historical datasets.
+- `abidu-amharic`: Amharic Bible runtime/cache source.
+- `sblgnt`: Greek New Testament, CC BY 4.0.
+- `wlc`: Hebrew Old Testament, public-domain source.
+- `stepbible`: lexical/Strong's/morphology data, file-by-file license verification required.
+- `macula-greek`: Greek morphology/syntax/semantic data, CC BY 4.0.
+- `macula-hebrew`: Hebrew morphology/syntax/semantic data, CC BY 4.0.
+- `openbible-geocoding`: biblical place data, subject to the dataset's stated CC BY 4.0 terms.
+- `patristics`: source-by-source verification required.
+- `historical`: source-by-source verification required.
 
-The import manifest is `registry/import-manifest.json`. The normalized record contract is `schema/study-data.schema.json`.
+## Normalized import format
+
+Each asset is a JSON document with:
+
+```json
+{
+  "source": {
+    "sourceId": "...",
+    "name": "...",
+    "role": "...",
+    "license": "...",
+    "attribution": "...",
+    "sourceUrl": "...",
+    "verified": true
+  },
+  "records": []
+}
+```
+
+The Android importer refuses documents where `verified` is false.
+
+## Attribution
+
+The app should expose source/license information in Settings > Licenses and on relevant study-data screens. Never remove upstream notices from imported source packages.
+
+The import manifest is `registry/import-manifest.json`; the normalized record contract is `schema/study-data.schema.json`.
