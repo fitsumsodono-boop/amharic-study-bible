@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verse Word Link",
+  "type": "object",
+  "required": ["id", "verseId", "token", "language"],
+  "properties": {
+    "id": {"type": "string"},
+    "verseId": {"type": "string"},
+    "token": {"type": "string"},
+    "language": {"enum": ["greek", "hebrew", "aramaic"]},
+    "lemma": {"type": "string"},
+    "strongs": {"type": "array", "items": {"type": "string"}},
+    "lexicalEntryId": {"type": "string"},
+    "morphology": {"type": "object"},
+    "syntax": {"type": "object"},
+    "position": {"type": "integer", "minimum": 0},
+    "sourceId": {"type": "string"}
+  },
+  "additionalProperties": true
+}
