@@ -1,0 +1,22 @@
+{
+  "source": {
+    "sourceId": "example-open-source",
+    "name": "Example dataset",
+    "role": "Development schema example",
+    "license": "CC BY 4.0",
+    "attribution": "Example only",
+    "sourceUrl": "https://example.org",
+    "verified": true
+  },
+  "records": [
+    {
+      "id": "example-lexical-1",
+      "type": "lexical",
+      "language": "grc",
+      "lemma": "λόγος",
+      "strongs": "G3056",
+      "gloss": "word",
+      "definition": "Example development record; replace with a verified source record before release."
+    }
+  ]
+}
