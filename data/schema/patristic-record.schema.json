@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Patristic Study Record",
+  "type": "object",
+  "required": ["id", "father", "work", "reference", "source", "contentType"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "father": {"type": "string", "minLength": 1},
+    "tradition": {"type": "string"},
+    "era": {"type": "string"},
+    "work": {"type": "string", "minLength": 1},
+    "reference": {"type": "string", "minLength": 1},
+    "biblicalReferences": {"type": "array", "items": {"type": "string"}},
+    "sourceLanguage": {"type": "string"},
+    "source": {"type": "string", "minLength": 1},
+    "contentType": {"enum": ["source-text", "translation", "summary", "amharic-explanation"]},
+    "englishText": {"type": "string"},
+    "amharicText": {"type": "string"},
+    "amharicExplanation": {"type": "string"},
+    "historicalContextAm": {"type": "string"},
+    "theologicalThemesAm": {"type": "array", "items": {"type": "string"}},
+    "license": {"type": "string"},
+    "attribution": {"type": "string"}
+  },
+  "additionalProperties": true
+}
