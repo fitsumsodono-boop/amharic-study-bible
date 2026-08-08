@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Greek/Hebrew Lexical Entry",
+  "type": "object",
+  "required": ["id", "language", "lemma", "meanings"],
+  "properties": {
+    "id": {"type": "string"},
+    "language": {"enum": ["greek", "hebrew", "aramaic"]},
+    "lemma": {"type": "string"},
+    "transliteration": {"type": "string"},
+    "pronunciation": {"type": "string"},
+    "strongs": {"type": "array", "items": {"type": "string"}},
+    "meanings": {
+      "type": "object",
+      "required": ["english", "amharic"],
+      "properties": {
+        "english": {"type": "array", "items": {"type": "string"}},
+        "amharic": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "semanticRange": {"type": "array", "items": {"type": "string"}},
+    "morphology": {"type": "object"},
+    "syntax": {"type": "object"},
+    "verseSenses": {"type": "array", "items": {"type": "object"}},
+    "relatedWords": {"type": "array", "items": {"type": "string"}},
+    "sources": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}
