@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "description": "Unified offline study-data import manifest. Only sources whose exact files and licenses are verified may be bundled.",
+  "schemaVersion": 2,
+  "description": "Unified offline study-data import manifest. Exact files must remain tied to their source license and attribution.",
   "sources": [
     {
       "id": "abidu-amharic",
@@ -14,43 +14,54 @@
       "role": "Greek New Testament",
       "provider": "SBL Greek New Testament",
       "license": "CC BY 4.0",
-      "status": "candidate"
+      "status": "verified-license",
+      "sourceUrl": "https://www.sblgnt.com/license/",
+      "attribution": "SBL Greek New Testament"
     },
     {
       "id": "wlc",
-      "role": "Hebrew Old Testament",
+      "role": "Hebrew Old Testament text",
       "provider": "Westminster Leningrad Codex",
       "license": "Public Domain",
-      "status": "candidate"
+      "status": "verified-license",
+      "sourceUrl": "https://ebible.org/details.php?id=hebwlc",
+      "attribution": "Westminster Leningrad Codex / Westminster Hebrew Institute"
     },
     {
       "id": "stepbible",
       "role": "Strong's, lexical and morphology support",
       "provider": "STEPBible Data",
-      "license": "CC BY 4.0 where stated by the dataset",
-      "status": "candidate",
-      "note": "Verify each imported file and retain attribution."
+      "license": "CC BY 4.0",
+      "status": "verified-repository-license",
+      "sourceUrl": "https://github.com/STEPBible/STEPBible-Data",
+      "attribution": "STEPBible Data"
     },
     {
       "id": "macula-greek",
       "role": "Greek morphology, syntax and semantic annotation",
       "provider": "MACULA Greek",
       "license": "CC BY 4.0",
-      "status": "candidate"
+      "status": "verified-repository-license",
+      "sourceUrl": "https://github.com/Clear-Bible/macula-greek",
+      "attribution": "MACULA Greek Linguistic Datasets"
     },
     {
       "id": "macula-hebrew",
       "role": "Hebrew morphology, syntax and semantic annotation",
       "provider": "MACULA Hebrew",
-      "license": "CC BY 4.0",
-      "status": "candidate"
+      "license": "CC BY 4.0 for the MACULA dataset; component data may have separate terms",
+      "status": "verified-repository-license",
+      "sourceUrl": "https://github.com/Clear-Bible/macula-hebrew",
+      "attribution": "MACULA Hebrew Linguistic Datasets",
+      "note": "Preserve component-level notices when importing files that incorporate third-party data."
     },
     {
       "id": "openbible-geocoding",
       "role": "Biblical place and map data",
       "provider": "OpenBible.info Bible Geocoding Data",
       "license": "CC BY 4.0",
-      "status": "candidate"
+      "status": "candidate",
+      "note": "Verify the exact downloadable file and attribution before bundling."
     },
     {
       "id": "patristics",
@@ -62,7 +73,7 @@
       "id": "historical",
       "role": "Historical people, events and context",
       "status": "source-by-source verification-required",
-      "note": "Every record must retain source, attribution and license metadata."
+      "note": "Every record must retain source, attribution, edition/version and license metadata."
     }
   ]
 }
