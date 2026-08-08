@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "description": "Unified offline study-data import manifest. Only sources whose exact files and licenses are verified may be bundled.",
+  "sources": [
+    {
+      "id": "abidu-amharic",
+      "role": "Amharic Bible text",
+      "provider": "Abidu Bible API",
+      "status": "runtime-api",
+      "version": "amhara"
+    },
+    {
+      "id": "sblgnt",
+      "role": "Greek New Testament",
+      "provider": "SBL Greek New Testament",
+      "license": "CC BY 4.0",
+      "status": "candidate"
+    },
+    {
+      "id": "wlc",
+      "role": "Hebrew Old Testament",
+      "provider": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "status": "candidate"
+    },
+    {
+      "id": "stepbible",
+      "role": "Strong's, lexical and morphology support",
+      "provider": "STEPBible Data",
+      "license": "CC BY 4.0 where stated by the dataset",
+      "status": "candidate",
+      "note": "Verify each imported file and retain attribution."
+    },
+    {
+      "id": "macula-greek",
+      "role": "Greek morphology, syntax and semantic annotation",
+      "provider": "MACULA Greek",
+      "license": "CC BY 4.0",
+      "status": "candidate"
+    },
+    {
+      "id": "macula-hebrew",
+      "role": "Hebrew morphology, syntax and semantic annotation",
+      "provider": "MACULA Hebrew",
+      "license": "CC BY 4.0",
+      "status": "candidate"
+    },
+    {
+      "id": "openbible-geocoding",
+      "role": "Biblical place and map data",
+      "provider": "OpenBible.info Bible Geocoding Data",
+      "license": "CC BY 4.0",
+      "status": "candidate"
+    },
+    {
+      "id": "patristics",
+      "role": "Church Fathers",
+      "status": "source-by-source verification-required",
+      "note": "Use public-domain editions or translations with explicit redistribution permission."
+    },
+    {
+      "id": "historical",
+      "role": "Historical people, events and context",
+      "status": "source-by-source verification-required",
+      "note": "Every record must retain source, attribution and license metadata."
+    }
+  ]
+}
